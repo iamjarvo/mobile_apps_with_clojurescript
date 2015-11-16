@@ -2,15 +2,11 @@
 
 ---
 
-# C for Clojure
+# Welcome to Philadelphia
+
+![inline](./images/rocky.png)
 
 ---
-
-# C for Complex
-
----
-
-# JK
 
 # [fit] Clojure is awesome!
 
@@ -18,8 +14,28 @@
 
 # Github Stars
 
-ClojureScript: 5261
-Clojure: 4696
+ClojureScript: 5309
+Clojure: 4734
+
+---
+
+#  `whoami`
+
+```clj
+{
+:name "Jearvon"
+:description "Loves programming"
+}
+;; Currently enamored with Lisp & Clojure
+```
+
+---
+
+# Agenda
+
+---
+
+#  Demo
 
 ---
 
@@ -27,7 +43,7 @@ Clojure: 4696
 
 ![inline](./images/iphone_1_release.jpg)
 
-[^1]: http://www.technologytell.com/apple/80187/steve-jobs-wanted-Wi-Fi-Spectrum-for-Apples-first-iPhone/
+[^Image credit]: http://www.technologytell.com/apple/80187/steve-jobs-wanted-Wi-Fi-Spectrum-for-Apples-first-iPhone
 
 ---
 
@@ -47,7 +63,7 @@ Clojure: 4696
 int main (int argc, const char * argv[])
 {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-  NSLog (@"Hello, World!");
+  NSLog (@"Hello, Clojure/conj!");
   [pool drain];
   return 0;
 }
@@ -60,6 +76,12 @@ int main (int argc, const char * argv[])
 ![inline](./images/xcode.png)
 
 [^1]: http://313e5987718b346aaf83-f5e825270f29a84f7881423410384342.r78.cf1.rackcdn.com/1411058188-xcode-6-header.png
+
+---
+
+# Many Platforms
+
+![inline](./images/mobile-devices.jpg)
 
 ---
 
@@ -95,21 +117,41 @@ int main (int argc, const char * argv[])
 
 ---
 
+# Leverage the Native Platform
+
+---
+
+# Tooling
+
+---
+
+# Current Workflow
+
+---
+
+# Browser Developer Tools
+
+![inline](./images/reat-developertools.jpg)
+
+---
+
+# Editor
+
+![inline](./images/emacs.jpg)
+
+---
+
 # React
 
 A JavaScript library for building user interfaces
 
 ---
 
-# React
-
-Declaritive
+# [fit] Declaritive Views
 
 ---
 
-# React
-
-JSX Components
+# Components
 
 ---
 
@@ -119,7 +161,7 @@ JSX Components
 var CommentBox = React.createClass({
   render: function() {
     return (
-      <div className="commentBox">Hello, world! I am a CommentBox. </div>
+      <div className="greeting">Hello, Clojure/conj. </div>
     );
   }
 });
@@ -129,39 +171,15 @@ var CommentBox = React.createClass({
 
 # React Native
 
----
-
-# React Native
-
-Hybrid Apps
-
----
-
-# React Native
-
-Tooling
-
----
-
-![inline](./images/React-Native-Flow.png)
-
----
-
-# React Native
-
 ```js
 var React = require('react-native');
-var { Image, StyleSheet, Text, View } = React;
+var { StyleSheet, Text, View } = React;
 
 var ReactNative = React.createClass({
     render: function() {
 	return (
 	    <View style={styles.row}>
-	    <Image
-	    source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}}
-		    style={styles.image}
-			   />
-	    <Text style={styles.title}> </Text>
+	    <Text style={styles.title}>Hello, Clojure/conj</Text>
 	    </View>
 	);
     });
@@ -180,6 +198,10 @@ var styles = StyleSheet.create({
 
 ---
 
+![inline](./images/react-native-lucid.png)
+
+---
+
 # ClojureScript
 
 ---
@@ -191,7 +213,8 @@ var styles = StyleSheet.create({
   (reify
     om/IRender
     (render [this]
-      (dom/h1 nil (:text data)))))
+      (view {:style {:margin 40 :alignItems "center"}}
+        (text nil "Hello Clojure/conj")
 ```
 
 ---
@@ -216,8 +239,8 @@ var styles = StyleSheet.create({
   (r/reactify-component
     (fn[props]
       (let [row (props :row)]
-        (print props)
-          [touchable-highlight {:style {:border-top-width 1 :border-color "#000"} :on-press #(alert "list" (str @row))} [text @row]]))))
+        [touchable-highlight {:style {:border-top-width 1}}
+        [text @row]]))))
 ```
 
 ---
@@ -228,17 +251,36 @@ A ClojureScript REPL into iOS JavaScriptCore.
 
 ---
 
-# Ambly Demo
-
----
-
 # Natal
 
 Bootstrap ClojureScript-based React Native apps
 
 ---
 
-# Natal Demo
+# Natal
+
+```sh
+$ ls
+native
+out
+project.clj
+src
+target
+```
+
+---
+
+# Natal
+
+```sh
+$ natal --help
+
+init [options] <name>  create a new ClojureScript React Native project
+launch                 compile project and run in simulator
+repl                   launch a ClojureScript REPL with background compilation
+xcode                  open Xcode project
+```
+
 
 ---
 
@@ -246,22 +288,20 @@ Bootstrap ClojureScript-based React Native apps
 
 ---
 
-# Downsides
+# Should I use this?
 
 ---
 
-# Dependencies
+# Shout outs
 
-LOTS
-
----
-
-# New Tech
+* Mike Fikes
+* ClojureScript community
 
 ---
 
 # Resources
 
+* Slack -> #cljsrn
 * http://cljsrn.org
 * https://facebook.github.io/react-native/
 * Me
